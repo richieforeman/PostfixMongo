@@ -1,0 +1,909 @@
+Delivered-To: richie@onixnet.com
+Received: by 10.50.110.6 with SMTP id hw6csp179337igb;
+        Sat, 10 Nov 2012 07:29:12 -0800 (PST)
+Received: by 10.181.11.167 with SMTP id ej7mr7569086wid.11.1352561351760;
+        Sat, 10 Nov 2012 07:29:11 -0800 (PST)
+Return-Path: <google-cloud-sql-discuss+bncBDPLJ4HYQACRBRPF7GCAKGQEHYOWL5Y@googlegroups.com>
+Received: from mail-wg0-f62.google.com (mail-wg0-f62.google.com [74.125.82.62])
+        by mx.google.com with ESMTPS id g47si849939wep.123.2012.11.10.07.29.10
+        (version=TLSv1/SSLv3 cipher=OTHER);
+        Sat, 10 Nov 2012 07:29:10 -0800 (PST)
+Received-SPF: pass (google.com: domain of google-cloud-sql-discuss+bncBDPLJ4HYQACRBRPF7GCAKGQEHYOWL5Y@googlegroups.com designates 74.125.82.62 as permitted sender)
+Authentication-Results: mx.google.com; spf=pass (google.com: domain of google-cloud-sql-discuss+bncBDPLJ4HYQACRBRPF7GCAKGQEHYOWL5Y@googlegroups.com designates 74.125.82.62 as permitted sender) smtp.mail=google-cloud-sql-discuss+bncBDPLJ4HYQACRBRPF7GCAKGQEHYOWL5Y@googlegroups.com; dkim=pass header.i=@googlegroups.com
+Received: by mail-wg0-f62.google.com with SMTP id dr1sf1502207wgb.27
+        for <richie@onixnet.com>; Sat, 10 Nov 2012 07:29:10 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20120806;
+        h=x-beenthere:mime-version:to:from:subject:message-id:date
+         :x-original-sender:reply-to:precedence:mailing-list:list-id
+         :x-google-group-id:list-post:list-help:list-archive:sender
+         :list-subscribe:list-unsubscribe:content-type;
+        bh=ohq7RtqhtQLhI/Fl9G/O2yUzcxlxqRuYIHNaddKos2A=;
+        b=sA0dbcf+tA4XWGw029Pu2pMdqgRPMKeWu+458Y7SAIcw/1PgBUu4IZ4Y1lw6PHWn2+
+         N4YhwBrDyxPP6sjwYQueFIa1JF6WrrrY8OVf6fECgLBZHt7gKYn8KFjFNTlnG/cq4EeF
+         1iewT5Bj7nihvNXPutXWP6lo9ks7QqFcAUj0VKNrNel8rb6u+DcAELS2vBGIjXkbnL4t
+         0BVAdgEUPLovIMpUnqLdt/2BK10bawMQhqLpwY/Xnay2FyleKuZaEdMoHPSdDCKiIa/Y
+         3dQO0dnNjqLUjJ0qMvxy74aYtLnHbqI/35UgfZRdvSGDEkrQCMYzEKExm9y80FUvkvse
+         rLqA==
+Received: by 10.180.19.39 with SMTP id b7mr763061wie.0.1352561350320;
+        Sat, 10 Nov 2012 07:29:10 -0800 (PST)
+X-BeenThere: google-cloud-sql-discuss@googlegroups.com
+Received: by 10.181.13.100 with SMTP id ex4ls3125264wid.0.gmail; Sat, 10 Nov
+ 2012 07:29:09 -0800 (PST)
+Received: by 10.216.193.131 with SMTP id k3mr1043336wen.4.1352561349000;
+        Sat, 10 Nov 2012 07:29:09 -0800 (PST)
+MIME-Version: 1.0
+To: Abridged Recipients <google-cloud-sql-discuss@googlegroups.com>
+From: google-cloud-sql-discuss@googlegroups.com
+Subject: Abridged summary of google-cloud-sql-discuss@googlegroups.com - 17 Messages in 6 Topics
+Message-ID: <20cf302acf3cbe7a2004ce25ba19@google.com>
+Date: Sat, 10 Nov 2012 15:29:08 +0000
+X-Original-Sender: google-cloud-sql-discuss@googlegroups.com
+Reply-To: google-cloud-sql-discuss@googlegroups.com
+Precedence: list
+Mailing-list: list google-cloud-sql-discuss@googlegroups.com; contact google-cloud-sql-discuss+owners@googlegroups.com
+List-ID: <google-cloud-sql-discuss.googlegroups.com>
+X-Google-Group-Id: 172052191838
+List-Post: <http://groups.google.com/group/google-cloud-sql-discuss/post?hl=en_US>,
+ <mailto:google-cloud-sql-discuss@googlegroups.com>
+List-Help: <http://groups.google.com/support/?hl=en_US>, <mailto:google-cloud-sql-discuss+help@googlegroups.com>
+List-Archive: <http://groups.google.com/group/google-cloud-sql-discuss?hl=en_US>
+Sender: google-cloud-sql-discuss@googlegroups.com
+List-Subscribe: <http://groups.google.com/group/google-cloud-sql-discuss/subscribe?hl=en_US>,
+ <mailto:google-cloud-sql-discuss+subscribe@googlegroups.com>
+List-Unsubscribe: <http://groups.google.com/group/google-cloud-sql-discuss/subscribe?hl=en_US>,
+ <mailto:googlegroups-manage+172052191838+unsubscribe@googlegroups.com>
+Content-Type: multipart/alternative; boundary=0016367f94b4b30060474d22062
+
+--0016367f94b4b30060474d22062
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+Today's Topic Summary
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+
+Group: google-cloud-sql-discuss@googlegroups.com
+Url: http://groups.google.com/group/google-cloud-sql-discuss/topics
+
+  - Google Apps Script JDBC Service and Google Cloud SQL [4 Updates]
+    http://groups.google.com/group/google-cloud-sql-discuss/t/3e083faf69109=
+cc3
+  - Error when attempting to add authorized apps [2 Updates]
+    http://groups.google.com/group/google-cloud-sql-discuss/t/d6bf6c7f49748=
+e9c
+  - Cannot create new instance (billing not enabled) [1 Update]
+    http://groups.google.com/group/google-cloud-sql-discuss/t/2c6954092bf02=
+ac8
+  - Cant create new instance Google Cloud SQL [5 Updates]
+    http://groups.google.com/group/google-cloud-sql-discuss/t/39e3f61edbe64=
+eb8
+  - You cannot create new instances because billing is disabled [2 Updates]
+    http://groups.google.com/group/google-cloud-sql-discuss/t/1a7de2887f0f5=
+ca4
+  - Unexpected Error when adding authorised application [3 Updates]
+    http://groups.google.com/group/google-cloud-sql-discuss/t/97ada2b0a7f32=
+a0f
+
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+Topic: Google Apps Script JDBC Service and Google Cloud SQL
+Url: http://groups.google.com/group/google-cloud-sql-discuss/t/3e083faf6910=
+9cc3
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+
+---------- 1 of 4 ----------
+From: Joe Faith <joefaith@google.com>
+Date: Nov 09 08:54AM -0800
+Url: http://groups.google.com/group/google-cloud-sql-discuss/msg/19dedc491a=
+fc0c63
+
+I'm very pleased to say that Apps Script now has a JDBC to Cloud SQL
+https://developers.google.com/apps-script/jdbc
+
+Hope you can make good use of it, and let us know how you get on.
+
+j
+
+
+--=20
+
+---------- 2 of 4 ----------
+From: Jacob van den Berg <jacobvdb@lagaroo.com.br>
+Date: Nov 09 03:12PM -0800
+Url: http://groups.google.com/group/google-cloud-sql-discuss/msg/8e09361482=
+7d3a13
+
+Thats great news +Joe Faith=20
+I=B4ll try to give it a spin the next few days :-)=20
+
+
+Em sexta-feira, 18 de novembro de 2011 15h20min24s UTC-2, Laurent Rousset=
+=20
+escreveu:
+
+
+---------- 3 of 4 ----------
+From: SS <sarathbabou.somaya@ssomens.com>
+Date: Nov 10 02:05AM -0800
+Url: http://groups.google.com/group/google-cloud-sql-discuss/msg/c38adaaf73=
+3b116d
+
+Hi Joe,
+           Any direct tool/method/function to import DATA from *
+ScriptDB/Spreadsheet* into *Google Cloud SQ*L?
+
+If so, plz refer me to the lnk!
+
+1000 Thnks,
+Som
+
+On Saturday,
+
+---------- 4 of 4 ----------
+From: Joe Faith <joefaith@google.com>
+Date: Nov 10 06:53AM -0800
+Url: http://groups.google.com/group/google-cloud-sql-discuss/msg/e54e773449=
+792b4e
+
+Hi Son
+
+You could use an Apps Script to gather the data from your spreadsheet then
+use the new JDBC to insert the values into your Cloud SQL database.
+
+Joe Faith | Google Cloud Product Manager
+
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+Topic: Error when attempting to add authorized apps
+Url: http://groups.google.com/group/google-cloud-sql-discuss/t/d6bf6c7f4974=
+8e9c
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+
+---------- 1 of 2 ----------
+From: Peter <peter_m_hayden@hotmail.com>
+Date: Nov 09 03:50PM -0800
+Url: http://groups.google.com/group/google-cloud-sql-discuss/msg/f8d58d70b9=
+582439
+
+I'm having this issue - An unexpected error has occurred. We're looking=20
+into it. -  as well when trying to add an authorized app to instance...=20
+what's the procedure? (new to all this) . Thanks.
+
+
+---------- 2 of 2 ----------
+From: Rob Clevenger <rcleveng@google.com>
+Date: Nov 09 03:52PM -0800
+Url: http://groups.google.com/group/google-cloud-sql-discuss/msg/d0c9181d6b=
+6301b3
+
+What's your project ID and also app_id you are trying to add?
+
+
+
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+Topic: Cannot create new instance (billing not enabled)
+Url: http://groups.google.com/group/google-cloud-sql-discuss/t/2c6954092bf0=
+2ac8
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+
+---------- 1 of 1 ----------
+From: Rob Clevenger <rcleveng@google.com>
+Date: Nov 09 03:26PM -0800
+Url: http://groups.google.com/group/google-cloud-sql-discuss/msg/edecac0336=
+f5d5f3
+
+Hi,
+
+Both projects now show they are correct and active. Please give it a try
+again.
+
+Thanks,
+
+Rob
+
+
+On Fri, Nov 9, 2012 at 2:17 AM, Manuel Alejandro Fernandez Casado <
+
+
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+Topic: Cant create new instance Google Cloud SQL
+Url: http://groups.google.com/group/google-cloud-sql-discuss/t/39e3f61edbe6=
+4eb8
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+
+---------- 1 of 5 ----------
+From: Cristobal Ramirez <snowblend21@gmail.com>
+Date: Nov 09 08:07AM -0800
+Url: http://groups.google.com/group/google-cloud-sql-discuss/msg/57840724f3=
+0c56c1
+
+Hi.=20
+I have the same problem
+Project number: 198703378662
+I appreciate your help, thanks in advance.
+
+
+---------- 2 of 5 ----------
+From: Rob <rcleveng@google.com>
+Date: Nov 09 09:19AM -0800
+Url: http://groups.google.com/group/google-cloud-sql-discuss/msg/ccb1a19b26=
+4c2c4e
+
+Project 790165179596 looks active.  Can you please try it again
+
+Thanks,
+
+Rob
+
+On Friday, November 9, 2012 2:19:20 AM UTC-8, Manuel Alejandro Fernandez=20
+Casado wrote:
+
+
+---------- 3 of 5 ----------
+From: Rob <rcleveng@google.com>
+Date: Nov 09 09:21AM -0800
+Url: http://groups.google.com/group/google-cloud-sql-discuss/msg/16663c8061=
+49ddd0
+
+Account 198703378662 is still pending. Have you added credit card=20
+information already in the billing page?  If so it can take up to an hour,=
+=20
+if not, please complete the billing signup.
+
+Rob
+
+
+
+---------- 4 of 5 ----------
+From: Rob <rcleveng@google.com>
+Date: Nov 09 09:21AM -0800
+Url: http://groups.google.com/group/google-cloud-sql-discuss/msg/20184e0b0c=
+a868b4
+
+Account 442777118880 looks correct. Please try again.
+
+Thanks,
+
+Rob
+
+On Friday, November 9, 2012 4:00:36 AM UTC-8, Dmitriy Makeev wrote:
+
+
+---------- 5 of 5 ----------
+From: Cristobal Ramirez <snowblend21@gmail.com>
+Date: Nov 09 12:44PM -0500
+Url: http://groups.google.com/group/google-cloud-sql-discuss/msg/856ed54ddc=
+315474
+
+Thank you for answering quickly.
+Now, my billing information is already added. So I will try in 1 more hour
+how you said.
+
+
+
+
+--=20
+Crist=F3bal Ram=EDrez
+
+
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+Topic: You cannot create new instances because billing is disabled
+Url: http://groups.google.com/group/google-cloud-sql-discuss/t/1a7de2887f0f=
+5ca4
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+
+---------- 1 of 2 ----------
+From: Manuel Alejandro Fernandez Casado <malejandrofc@gmail.com>
+Date: Nov 09 07:50AM -0800
+Url: http://groups.google.com/group/google-cloud-sql-discuss/msg/65d5d8f738=
+47117
+
+Hi.
+
+Someone can help me with my project? Billing is enabled.
+
+790165179596
+
+Thanks in advance.
+
+El viernes, 9 de noviembre de 2012 00:36:13 UTC+1, Tony Piazza escribi=F3:
+
+
+---------- 2 of 2 ----------
+From: Joe Faith <joefaith@google.com>
+Date: Nov 09 09:32AM -0800
+Url: http://groups.google.com/group/google-cloud-sql-discuss/msg/4749ce1ddc=
+e078f5
+
+Hi Manuel
+
+We're looking into this.
+Sorry for the disruption.
+
+J
+
+On Fri, Nov 9, 2012 at 7:50 AM, Manuel Alejandro Fernandez Casado <
+
+--=20
+Joe Faith | Product Manager | Google Cloud
+
+
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+Topic: Unexpected Error when adding authorised application
+Url: http://groups.google.com/group/google-cloud-sql-discuss/t/97ada2b0a7f3=
+2a0f
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+
+---------- 1 of 3 ----------
+From: Colm Bennett <colm.bennett@gmail.com>
+Date: Nov 09 08:42AM -0800
+Url: http://groups.google.com/group/google-cloud-sql-discuss/msg/3e3f40c0d2=
+046fa8
+
+Hi,
+
+Doing the first Guesbook tutorial as a prelude to moving from datastore to=
+=20
+Cloud SQL. Have the instance up, billing all ok, database and table created=
+=20
+ok. But when I try to add an
+
+---------- 2 of 3 ----------
+From: "Razvan Musaloiu-E." <razvanm@google.com>
+Date: Nov 09 08:52AM -0800
+Url: http://groups.google.com/group/google-cloud-sql-discuss/msg/bd02bb27de=
+2e9ca2
+
+What project are you trying to add? Feel free to send me that off-the-list.
+
+-- Razvan ME
+
+
+
+
+---------- 3 of 3 ----------
+From: Amit Mondal <amitmondal@google.com>
+Date: Nov 09 09:10AM -0800
+Url: http://groups.google.com/group/google-cloud-sql-discuss/msg/41bd500643=
+ae3869
+
+Are you trying to add a master slave GAE app with speckle? Or a US speckle
+instance with EU GAE app?
+
+
+
+
+
+
+
+
+--0016367f94b4b30060474d22062
+Content-Type: text/html; charset=ISO-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+<div style=3D"font-family: arial; font-weight: bold; color: #222222; paddin=
+g: 0px">&nbsp;
+  <a name=3D"digest_top" style=3D"color: #222222">Today's Topic Summary</a>=
+</div>
+<p>Group: <a style=3Dcolor:15c;text-decoration:none href=3Dhttp://groups.go=
+ogle.com/group/google-cloud-sql-discuss/topics>http://groups.google.com/gro=
+up/google-cloud-sql-discuss/topics</a></p>
+<ul style=3D"margin-left:3px; padding-left:0px">
+<li type=3D"square" style=3D"color: #555555"><a style=3Dcolor:15c;text-deco=
+ration:none href=3D"#group_thread_0">Google Apps Script JDBC Service and Go=
+ogle Cloud SQL</a> [4 Updates]</li>
+<li type=3D"square" style=3D"color: #555555"><a style=3Dcolor:15c;text-deco=
+ration:none href=3D"#group_thread_1">Error when attempting to add authorize=
+d apps</a> [2 Updates]</li>
+<li type=3D"square" style=3D"color: #555555"><a style=3Dcolor:15c;text-deco=
+ration:none href=3D"#group_thread_2">Cannot create new instance (billing no=
+t enabled)</a> [1 Update]</li>
+<li type=3D"square" style=3D"color: #555555"><a style=3Dcolor:15c;text-deco=
+ration:none href=3D"#group_thread_3">Cant create new instance Google Cloud =
+SQL</a> [5 Updates]</li>
+<li type=3D"square" style=3D"color: #555555"><a style=3Dcolor:15c;text-deco=
+ration:none href=3D"#group_thread_4">You cannot create new instances becaus=
+e billing is disabled</a> [2 Updates]</li>
+<li type=3D"square" style=3D"color: #555555"><a style=3Dcolor:15c;text-deco=
+ration:none href=3D"#group_thread_5">Unexpected Error when adding authorise=
+d application</a> [3 Updates]</li>
+
+</ul>
+
+
+
+ =20
+  <a name=3D"group_thread_0"></a>
+  <div style=3D"background-color: #f5f5f5; font-family: arial; border-top: =
+1px solid #e5e5e5; padding: 4px 0 5px 32px; "
+    >&nbsp;<a target=3D"_blank" href=3D"http://groups.google.com/group/goog=
+le-cloud-sql-discuss/t/3e083faf69109cc3" style=3D"color:15c;text-decoration=
+:none"
+      >Google Apps Script JDBC Service and Google Cloud SQL</a></div>
+
+ =20
+  <ul>
+    <div style=3D"font-family: arial; padding:10px 20px 14px 20px; margin: =
+0"
+      ><span style=3D"color: #222222; font-weight: bold"
+      >Joe Faith &lt;joefaith@google.com&gt;</span> Nov 09 08:54AM -0800
+      &nbsp;<br /><br />
+      I&#39;m very pleased to say that Apps Script now has a JDBC to Cloud =
+SQL<br />
+<a href=3D"https://developers.google.com/apps-script/jdbc">https://develope=
+rs.google.com/apps-script/jdbc</a><br />
+&nbsp;<br />
+Hope you can make good use of it, and let us know how you get on.<br />
+&nbsp;<br />
+j<br />
+&nbsp;<br />
+&nbsp;<br />
+--=20
+      <a style=3Dcolor:15c;text-decoration:none href=3D"http://groups.googl=
+e.com/group/google-cloud-sql-discuss/msg/19dedc491afc0c63">...more</a><br /=
+>
+    </div>
+  </ul>
+ =20
+  <ul>
+    <div style=3D"background-color: #f5f5f5; font-family: arial; padding:10=
+px 20px 14px 20px; margin: 0"
+      ><span style=3D"color: #222222; font-weight: bold"
+      >Jacob van den Berg &lt;jacobvdb@lagaroo.com.br&gt;</span> Nov 09 03:=
+12PM -0800
+      &nbsp;<br /><br />
+      Thats great news +Joe Faith <br />
+I=B4ll try to give it a spin the next few days :-) <br />
+&nbsp;<br />
+&nbsp;<br />
+Em sexta-feira, 18 de novembro de 2011 15h20min24s UTC-2, Laurent Rousset <=
+br />
+escreveu:<br />
+
+      <a style=3Dcolor:15c;text-decoration:none href=3D"http://groups.googl=
+e.com/group/google-cloud-sql-discuss/msg/8e093614827d3a13">...more</a><br /=
+>
+    </div>
+  </ul>
+ =20
+  <ul>
+    <div style=3D"font-family: arial; padding:10px 20px 14px 20px; margin: =
+0"
+      ><span style=3D"color: #222222; font-weight: bold"
+      >SS &lt;sarathbabou.somaya@ssomens.com&gt;</span> Nov 10 02:05AM -080=
+0
+      &nbsp;<br /><br />
+      Hi Joe,<br />
+           Any direct tool/method/function to import DATA from *<br />
+ScriptDB/Spreadsheet* into *Google Cloud SQ*L?<br />
+&nbsp;<br />
+If so, plz refer me to the lnk!<br />
+&nbsp;<br />
+1000 Thnks,<br />
+Som<br />
+&nbsp;<br />
+On Saturday,
+      <a style=3Dcolor:15c;text-decoration:none href=3D"http://groups.googl=
+e.com/group/google-cloud-sql-discuss/msg/c38adaaf733b116d">...more</a><br /=
+>
+    </div>
+  </ul>
+ =20
+  <ul>
+    <div style=3D"background-color: #f5f5f5; font-family: arial; padding:10=
+px 20px 14px 20px; margin: 0"
+      ><span style=3D"color: #222222; font-weight: bold"
+      >Joe Faith &lt;joefaith@google.com&gt;</span> Nov 10 06:53AM -0800
+      &nbsp;<br /><br />
+      Hi Son<br />
+&nbsp;<br />
+You could use an Apps Script to gather the data from your spreadsheet then<=
+br />
+use the new JDBC to insert the values into your Cloud SQL database.<br />
+&nbsp;<br />
+Joe Faith | Google Cloud Product Manager
+      <a style=3Dcolor:15c;text-decoration:none href=3D"http://groups.googl=
+e.com/group/google-cloud-sql-discuss/msg/e54e773449792b4e">...more</a><br /=
+>
+    </div>
+  </ul>
+ =20
+
+ =20
+  <a name=3D"group_thread_1"></a>
+  <div style=3D"background-color: #f5f5f5; font-family: arial; border-top: =
+1px solid #e5e5e5; padding: 4px 0 5px 32px; "
+    >&nbsp;<a target=3D"_blank" href=3D"http://groups.google.com/group/goog=
+le-cloud-sql-discuss/t/d6bf6c7f49748e9c" style=3D"color:15c;text-decoration=
+:none"
+      >Error when attempting to add authorized apps</a></div>
+
+ =20
+  <ul>
+    <div style=3D"font-family: arial; padding:10px 20px 14px 20px; margin: =
+0"
+      ><span style=3D"color: #222222; font-weight: bold"
+      >Peter &lt;peter_m_hayden@hotmail.com&gt;</span> Nov 09 03:50PM -0800
+      &nbsp;<br /><br />
+      I&#39;m having this issue - An unexpected error has occurred. We&#39;=
+re looking <br />
+into it. -  as well when trying to add an authorized app to instance... <br=
+ />
+what&#39;s the procedure? (new to all this) . Thanks.<br />
+
+      <a style=3Dcolor:15c;text-decoration:none href=3D"http://groups.googl=
+e.com/group/google-cloud-sql-discuss/msg/f8d58d70b9582439">...more</a><br /=
+>
+    </div>
+  </ul>
+ =20
+  <ul>
+    <div style=3D"background-color: #f5f5f5; font-family: arial; padding:10=
+px 20px 14px 20px; margin: 0"
+      ><span style=3D"color: #222222; font-weight: bold"
+      >Rob Clevenger &lt;rcleveng@google.com&gt;</span> Nov 09 03:52PM -080=
+0
+      &nbsp;<br /><br />
+      What&#39;s your project ID and also app_id you are trying to add?<br =
+/>
+&nbsp;<br />
+
+      <a style=3Dcolor:15c;text-decoration:none href=3D"http://groups.googl=
+e.com/group/google-cloud-sql-discuss/msg/d0c9181d6b6301b3">...more</a><br /=
+>
+    </div>
+  </ul>
+ =20
+
+ =20
+  <a name=3D"group_thread_2"></a>
+  <div style=3D"background-color: #f5f5f5; font-family: arial; border-top: =
+1px solid #e5e5e5; padding: 4px 0 5px 32px; "
+    >&nbsp;<a target=3D"_blank" href=3D"http://groups.google.com/group/goog=
+le-cloud-sql-discuss/t/2c6954092bf02ac8" style=3D"color:15c;text-decoration=
+:none"
+      >Cannot create new instance (billing not enabled)</a></div>
+
+ =20
+  <ul>
+    <div style=3D"font-family: arial; padding:10px 20px 14px 20px; margin: =
+0"
+      ><span style=3D"color: #222222; font-weight: bold"
+      >Rob Clevenger &lt;rcleveng@google.com&gt;</span> Nov 09 03:26PM -080=
+0
+      &nbsp;<br /><br />
+      Hi,<br />
+&nbsp;<br />
+Both projects now show they are correct and active. Please give it a try<br=
+ />
+again.<br />
+&nbsp;<br />
+Thanks,<br />
+&nbsp;<br />
+Rob<br />
+&nbsp;<br />
+&nbsp;<br />
+On Fri, Nov 9, 2012 at 2:17 AM, Manuel Alejandro Fernandez Casado &lt;<br /=
+>
+
+      <a style=3Dcolor:15c;text-decoration:none href=3D"http://groups.googl=
+e.com/group/google-cloud-sql-discuss/msg/edecac0336f5d5f3">...more</a><br /=
+>
+    </div>
+  </ul>
+ =20
+
+ =20
+  <a name=3D"group_thread_3"></a>
+  <div style=3D"background-color: #f5f5f5; font-family: arial; border-top: =
+1px solid #e5e5e5; padding: 4px 0 5px 32px; "
+    >&nbsp;<a target=3D"_blank" href=3D"http://groups.google.com/group/goog=
+le-cloud-sql-discuss/t/39e3f61edbe64eb8" style=3D"color:15c;text-decoration=
+:none"
+      >Cant create new instance Google Cloud SQL</a></div>
+
+ =20
+  <ul>
+    <div style=3D"font-family: arial; padding:10px 20px 14px 20px; margin: =
+0"
+      ><span style=3D"color: #222222; font-weight: bold"
+      >Cristobal Ramirez &lt;snowblend21@gmail.com&gt;</span> Nov 09 08:07A=
+M -0800
+      &nbsp;<br /><br />
+      Hi. <br />
+I have the same problem<br />
+Project number: 198703378662<br />
+I appreciate your help, thanks in advance.<br />
+
+      <a style=3Dcolor:15c;text-decoration:none href=3D"http://groups.googl=
+e.com/group/google-cloud-sql-discuss/msg/57840724f30c56c1">...more</a><br /=
+>
+    </div>
+  </ul>
+ =20
+  <ul>
+    <div style=3D"background-color: #f5f5f5; font-family: arial; padding:10=
+px 20px 14px 20px; margin: 0"
+      ><span style=3D"color: #222222; font-weight: bold"
+      >Rob &lt;rcleveng@google.com&gt;</span> Nov 09 09:19AM -0800
+      &nbsp;<br /><br />
+      Project 790165179596 looks active.  Can you please try it again<br />
+&nbsp;<br />
+Thanks,<br />
+&nbsp;<br />
+Rob<br />
+&nbsp;<br />
+On Friday, November 9, 2012 2:19:20 AM UTC-8, Manuel Alejandro Fernandez <b=
+r />
+Casado wrote:<br />
+
+      <a style=3Dcolor:15c;text-decoration:none href=3D"http://groups.googl=
+e.com/group/google-cloud-sql-discuss/msg/ccb1a19b264c2c4e">...more</a><br /=
+>
+    </div>
+  </ul>
+ =20
+  <ul>
+    <div style=3D"font-family: arial; padding:10px 20px 14px 20px; margin: =
+0"
+      ><span style=3D"color: #222222; font-weight: bold"
+      >Rob &lt;rcleveng@google.com&gt;</span> Nov 09 09:21AM -0800
+      &nbsp;<br /><br />
+      Account 198703378662 is still pending. Have you added credit card <br=
+ />
+information already in the billing page?  If so it can take up to an hour, =
+<br />
+if not, please complete the billing signup.<br />
+&nbsp;<br />
+Rob<br />
+&nbsp;<br />
+
+      <a style=3Dcolor:15c;text-decoration:none href=3D"http://groups.googl=
+e.com/group/google-cloud-sql-discuss/msg/16663c806149ddd0">...more</a><br /=
+>
+    </div>
+  </ul>
+ =20
+  <ul>
+    <div style=3D"background-color: #f5f5f5; font-family: arial; padding:10=
+px 20px 14px 20px; margin: 0"
+      ><span style=3D"color: #222222; font-weight: bold"
+      >Rob &lt;rcleveng@google.com&gt;</span> Nov 09 09:21AM -0800
+      &nbsp;<br /><br />
+      Account 442777118880 looks correct. Please try again.<br />
+&nbsp;<br />
+Thanks,<br />
+&nbsp;<br />
+Rob<br />
+&nbsp;<br />
+On Friday, November 9, 2012 4:00:36 AM UTC-8, Dmitriy Makeev wrote:<br />
+
+      <a style=3Dcolor:15c;text-decoration:none href=3D"http://groups.googl=
+e.com/group/google-cloud-sql-discuss/msg/20184e0b0ca868b4">...more</a><br /=
+>
+    </div>
+  </ul>
+ =20
+  <ul>
+    <div style=3D"font-family: arial; padding:10px 20px 14px 20px; margin: =
+0"
+      ><span style=3D"color: #222222; font-weight: bold"
+      >Cristobal Ramirez &lt;snowblend21@gmail.com&gt;</span> Nov 09 12:44P=
+M -0500
+      &nbsp;<br /><br />
+      Thank you for answering quickly.<br />
+Now, my billing information is already added. So I will try in 1 more hour<=
+br />
+how you said.<br />
+&nbsp;<br />
+&nbsp;<br />
+&nbsp;<br />
+&nbsp;<br />
+-- <br />
+Crist=F3bal Ram=EDrez<br />
+
+      <a style=3Dcolor:15c;text-decoration:none href=3D"http://groups.googl=
+e.com/group/google-cloud-sql-discuss/msg/856ed54ddc315474">...more</a><br /=
+>
+    </div>
+  </ul>
+ =20
+
+ =20
+  <a name=3D"group_thread_4"></a>
+  <div style=3D"background-color: #f5f5f5; font-family: arial; border-top: =
+1px solid #e5e5e5; padding: 4px 0 5px 32px; "
+    >&nbsp;<a target=3D"_blank" href=3D"http://groups.google.com/group/goog=
+le-cloud-sql-discuss/t/1a7de2887f0f5ca4" style=3D"color:15c;text-decoration=
+:none"
+      >You cannot create new instances because billing is disabled</a></div=
+>
+
+ =20
+  <ul>
+    <div style=3D"font-family: arial; padding:10px 20px 14px 20px; margin: =
+0"
+      ><span style=3D"color: #222222; font-weight: bold"
+      >Manuel Alejandro Fernandez Casado &lt;malejandrofc@gmail.com&gt;</sp=
+an> Nov 09 07:50AM -0800
+      &nbsp;<br /><br />
+      Hi.<br />
+&nbsp;<br />
+Someone can help me with my project? Billing is enabled.<br />
+&nbsp;<br />
+790165179596<br />
+&nbsp;<br />
+Thanks in advance.<br />
+&nbsp;<br />
+El viernes, 9 de noviembre de 2012 00:36:13 UTC+1, Tony Piazza escribi=F3:<=
+br />
+
+      <a style=3Dcolor:15c;text-decoration:none href=3D"http://groups.googl=
+e.com/group/google-cloud-sql-discuss/msg/65d5d8f73847117">...more</a><br />
+    </div>
+  </ul>
+ =20
+  <ul>
+    <div style=3D"background-color: #f5f5f5; font-family: arial; padding:10=
+px 20px 14px 20px; margin: 0"
+      ><span style=3D"color: #222222; font-weight: bold"
+      >Joe Faith &lt;joefaith@google.com&gt;</span> Nov 09 09:32AM -0800
+      &nbsp;<br /><br />
+      Hi Manuel<br />
+&nbsp;<br />
+We&#39;re looking into this.<br />
+Sorry for the disruption.<br />
+&nbsp;<br />
+J<br />
+&nbsp;<br />
+On Fri, Nov 9, 2012 at 7:50 AM, Manuel Alejandro Fernandez Casado &lt;<br /=
+>
+&nbsp;<br />
+-- <br />
+Joe Faith | Product Manager | Google Cloud<br />
+
+      <a style=3Dcolor:15c;text-decoration:none href=3D"http://groups.googl=
+e.com/group/google-cloud-sql-discuss/msg/4749ce1ddce078f5">...more</a><br /=
+>
+    </div>
+  </ul>
+ =20
+
+ =20
+  <a name=3D"group_thread_5"></a>
+  <div style=3D"background-color: #f5f5f5; font-family: arial; border-top: =
+1px solid #e5e5e5; padding: 4px 0 5px 32px; "
+    >&nbsp;<a target=3D"_blank" href=3D"http://groups.google.com/group/goog=
+le-cloud-sql-discuss/t/97ada2b0a7f32a0f" style=3D"color:15c;text-decoration=
+:none"
+      >Unexpected Error when adding authorised application</a></div>
+
+ =20
+  <ul>
+    <div style=3D"font-family: arial; padding:10px 20px 14px 20px; margin: =
+0"
+      ><span style=3D"color: #222222; font-weight: bold"
+      >Colm Bennett &lt;colm.bennett@gmail.com&gt;</span> Nov 09 08:42AM -0=
+800
+      &nbsp;<br /><br />
+      Hi,<br />
+&nbsp;<br />
+Doing the first Guesbook tutorial as a prelude to moving from datastore to =
+<br />
+Cloud SQL. Have the instance up, billing all ok, database and table created=
+ <br />
+ok. But when I try to add an
+      <a style=3Dcolor:15c;text-decoration:none href=3D"http://groups.googl=
+e.com/group/google-cloud-sql-discuss/msg/3e3f40c0d2046fa8">...more</a><br /=
+>
+    </div>
+  </ul>
+ =20
+  <ul>
+    <div style=3D"background-color: #f5f5f5; font-family: arial; padding:10=
+px 20px 14px 20px; margin: 0"
+      ><span style=3D"color: #222222; font-weight: bold"
+      >&quot;Razvan Musaloiu-E.&quot; &lt;razvanm@google.com&gt;</span> Nov=
+ 09 08:52AM -0800
+      &nbsp;<br /><br />
+      What project are you trying to add? Feel free to send me that off-the=
+-list.<br />
+&nbsp;<br />
+-- Razvan ME<br />
+&nbsp;<br />
+&nbsp;<br />
+
+      <a style=3Dcolor:15c;text-decoration:none href=3D"http://groups.googl=
+e.com/group/google-cloud-sql-discuss/msg/bd02bb27de2e9ca2">...more</a><br /=
+>
+    </div>
+  </ul>
+ =20
+  <ul>
+    <div style=3D"font-family: arial; padding:10px 20px 14px 20px; margin: =
+0"
+      ><span style=3D"color: #222222; font-weight: bold"
+      >Amit Mondal &lt;amitmondal@google.com&gt;</span> Nov 09 09:10AM -080=
+0
+      &nbsp;<br /><br />
+      Are you trying to add a master slave GAE app with speckle? Or a US sp=
+eckle<br />
+instance with EU GAE app?<br />
+&nbsp;<br />
+&nbsp;<br />
+&nbsp;<br />
+
+      <a style=3Dcolor:15c;text-decoration:none href=3D"http://groups.googl=
+e.com/group/google-cloud-sql-discuss/msg/41bd500643ae3869">...more</a><br /=
+>
+    </div>
+  </ul>
+ =20
+
+
+
+  <div style=3D"color:#555555; padding: 27px 0 0 40px">
+  <p>
+    You received this message because you are subscribed to the Google Grou=
+p google-cloud-sql-discuss.<br />
+    You can <a style=3Dcolor:15c;text-decoration:none href=3D"mailto:google=
+-cloud-sql-discuss@googlegroups.com">post via email</a>.<br />
+    To unsubscribe from this group, <a style=3Dcolor:15c;text-decoration:no=
+ne href=3D"mailto:google-cloud-sql-discuss+unsubscribe@googlegroups.com">se=
+nd</a> an empty message.<br />
+    For more options, <a style=3Dcolor:15c;text-decoration:none href=3D"htt=
+p://groups.google.com/group/google-cloud-sql-discuss/topics">visit</a> this=
+ group.<br />
+  </p>
+
+
+--0016367f94b4b30060474d22062--
